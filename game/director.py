@@ -1,21 +1,28 @@
 
+from game.cards import Cards
 class Director:
     
     def __init__(self):
-        print("estoy en el init del Director")
-        self.dice=[]
+        self.cards=[]
         self.isPlaying=True
-            
+
+        for i in range(13):
+            cards = Cards()
+            self.cards.append(cards)
+        print("dentro del init de la Clase Director")
+           ### #print(f"Espacio en memoria  para la {i}° carta  ",self.cards[i])
     
     def startgame(self):
-        print("Estoy dentro de startgame")
         while self.isPlaying:
-          print("inside While loop..")
+            card = Cards()
+            print("------------------------------")
+            print()
+            print()
+            #print("The card is : ", card.player_choice())
 
-          o = input("Do you Play  y / n ?")
-
-          if o != "y":
-              self.isPlaying = False
-
-
+            p = input("Do you Play  y / n ?")          
+            if p.lower() != "y":
+                self.isPlaying = False
+                print(" Game is Over ")
+                print("Thank you and cameback soon!")    
 

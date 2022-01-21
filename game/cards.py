@@ -1,10 +1,10 @@
 import random
-
 class Cards:
     def __init__(self):
         self.totalScore=300
+        self.partialScore=0
         self.lost_points= 75
-        self.win_points=100
+        self.win_points= 100
         self.previusNumber = 0
         self.currentNumber = 0
 
@@ -27,22 +27,16 @@ class Cards:
         return self.player  
 
     def player_choice(self):
-
-        #The player guesses if the next one will be higher or lower. (Julia)
+        print("The Magig Score is :", card.getTotalScore())
+        #The player guesses if the next card will be higher or lower. (Julia)
+        #getPreviusCardNumber entrega la carta anterior para la comparacion.
         print("The Card is : ",card.getPreviusCardNumber())
         opt = input("Higher or Lower [h/l] ? :")
+        #getCurrentCardNumber entrega la carta posterior para la comparacion.
         self.currentNumber = card.getCurrentCardNumber()
         print("Next Card was : ",self.currentNumber)
-        
-        if  self.currentNumber > self.previusNumber and opt == "h":
-            self.totalScore += self.win_points
-            print("You wins !!")
-            print("Your Score is : ", self.totalScore)
-        else:
-            print("You lost !!")
-            self.totalScore -= self.lost_points
-            print("Your Score is : ", self.totalScore)                   
-print()
-card = Cards()
-card.player_choice()          
-
+        #Aca iria tu parte Julia############################
+        #The player guesses if the next one will be higher or lower. (Julia)
+        #The next card is displayed.(Julia)
+     
+card=Cards()

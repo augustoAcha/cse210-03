@@ -1,4 +1,4 @@
-# cse210-02
+# cse210-03
 Team a:
 Julia, Iris, Cristian, Sean, Augusto
 __main__.py (entry point)
